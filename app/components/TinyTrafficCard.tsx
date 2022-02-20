@@ -13,7 +13,7 @@ const TinyTrafficCard: FC<TinyTrafficCardProps> = ({ traffic: { line, message, s
   const hasWorks = useMemo(() => slug.includes("trav"), [slug]);
 
   const classNames = useMemo(() => {
-    return cx("relative flex-shrink-0 p-1.5 sm:p-3 transition-shadow bg-white shadow cursor-pointer hover:shadow-lg cursor rounded-lg sm:rounded-xl", {
+    return cx("relative flex-shrink-0 p-1.5 sm:p-2.5 transition-shadow bg-white shadow cursor-pointer hover:shadow-lg cursor rounded-lg sm:rounded-xl", {
       "ring-2 sm:ring ring-orange-300 bg-orange-50 hover:shadow-orange-200": hasWorks,
       "ring-2 sm:ring ring-red-500 bg-red-50 hover:shadow-red-200": hasIncidents,
     });
@@ -21,7 +21,7 @@ const TinyTrafficCard: FC<TinyTrafficCardProps> = ({ traffic: { line, message, s
 
   return (
     <div className={classNames}>
-      <img className="w-7 sm:w-9" src={`/img/lines/${type}/${line}.svg`} alt={`Ligne ${line}`} />
+      <img className="w-7 sm:w-8" src={`/img/lines/${type}/${line}.svg`} alt={`Ligne ${line}`} />
     </div>
   );
 };
