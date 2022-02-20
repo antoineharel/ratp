@@ -16,7 +16,7 @@ export default function Index() {
 
   return (
     <div className="sm:w-[640px] p-10 mx-auto space-y-9">
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         <h2 className="flex items-center gap-1 sm:gap-1.5 text-xl font-semibold sm:text-xl md:text-2xl">
           <img className="w-6 sm:w-7 md:w-8" src="/img/metro.svg" />
           Métros
@@ -27,7 +27,7 @@ export default function Index() {
           ))}
         </TinyTrafficGrid>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         <h2 className="flex items-center gap-1 sm:gap-1.5 text-xl font-semibold sm:text-xl md:text-2xl">
           <img className="w-6 sm:w-7 md:w-8" src="/img/rer.svg" />
           RER
@@ -38,7 +38,7 @@ export default function Index() {
           ))}
         </TinyTrafficGrid>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         <h2 className="flex items-center gap-1 sm:gap-1.5 text-xl font-semibold sm:text-xl md:text-2xl">
           <img className="w-6 sm:w-7 md:w-8" src="/img/tramway.svg" />
           Tramway

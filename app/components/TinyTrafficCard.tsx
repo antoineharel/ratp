@@ -1,7 +1,6 @@
 import { FC, useMemo } from "react";
 import { cx } from "~/lib/cx";
 import { LineTraffic, LineType } from "~/lib/ratp";
-import { BsConeStriped, BsExclamationCircleFill } from "react-icons/bs";
 
 interface TinyTrafficCardProps {
   traffic: LineTraffic;
@@ -9,7 +8,7 @@ interface TinyTrafficCardProps {
 }
 
 const TinyTrafficCard: FC<TinyTrafficCardProps> = ({ traffic: { line, message, slug, title }, type }) => {
-  const hasIncidents = useMemo(() => slug === "critical" || line === "5", [slug]);
+  const hasIncidents = useMemo(() => slug === "critical", [slug]);
   const hasWorks = useMemo(() => slug.includes("trav"), [slug]);
 
   const classNames = useMemo(() => {
