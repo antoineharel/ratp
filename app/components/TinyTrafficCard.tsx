@@ -1,6 +1,10 @@
 import { FC, useMemo } from "react";
 import { cx } from "~/lib/cx";
 import { LineTraffic, LineType } from "~/lib/ratp";
+import Tippy from "@tippyjs/react";
+import { Link } from "remix";
+
+import "tippy.js/dist/tippy.css";
 
 interface TinyTrafficCardProps {
   traffic: LineTraffic;
@@ -19,9 +23,29 @@ const TinyTrafficCard: FC<TinyTrafficCardProps> = ({ traffic: { line, message, s
   }, []);
 
   return (
-    <div className={classNames}>
-      <img className="w-7 sm:w-8" src={`/img/lines/${type}/${line}.svg`} alt={`Ligne ${line}`} />
-    </div>
+    <Tippy
+      duration={0}
+      content={
+        <div className="p-4 space-y-1 text-sm bg-white shadow-lg">
+          <div
+            className={cx("font-semibold", {
+              "text-green-600": slug === "normal",
+              "text-red-500": hasIncidents,
+              "text-orange-500": hasWorks,
+            })}
+          >
+            {title}
+          </div>
+          <div>{message}</div>
+        </div>
+      }
+    >
+      <Link to="/test">
+        <div className={classNames} data-tip>
+          <img className="w-7 sm:w-8" src={`/img/lines/${type}/${line}.svg`} alt={`Ligne ${line}`} />
+        </div>
+      </Link>
+    </Tippy>
   );
 };
 
