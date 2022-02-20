@@ -1,12 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 955 955.4" style="enable-background:new 0 0 955 955.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:transparent;stroke:#B98B59;stroke-width:70;stroke-miterlimit:10;}
-	.st1{fill:#B98B59;}
-</style>
-<circle class="st0" cx="476.2" cy="476.2" r="442.9"/>
-<path class="st1" d="M651.9,306.7v-81.8H300.5v83.9h244L422.2,536.6c-44.2,82-61.9,124.4-61.9,190.9h114.6
-	C474.8,648.4,541.5,498.3,651.9,306.7"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="250px" height="250px" viewBox="0 0 283.46 283.46">
+	<title>Paris transit icons - Tram T7</title>
+	<rect fill="#8D5E2A" width="283.46" height="42.52" rx="14.17"/>
+	<rect fill="#8D5E2A" width="283.46" height="42.52" rx="14.17" y="240.94"/>
+	<path fill="#25303B" d="M104.48,107.41V197H80.35V107.41H46.78V87.76H138v19.65ZM198.17,197h-24.9c0-14.38,3.86-23.67,13.45-41.45L213.33,106H160.27V87.76h76.42v17.79C212.71,147.16,198.17,179.79,198.17,197Z"/>
 </svg>
