@@ -12,15 +12,18 @@ export namespace ratp {
   }
 }
 
-type LineTraffic = {
+export type LineTraffic = {
   line: string;
-  slug: string;
+  slug: TrafficSlug;
   title: string;
   message: string;
 }
 
-type Traffic = {
+export type Traffic = {
   metros: LineTraffic[];
   rers: LineTraffic[];
   tramways: LineTraffic[];
 }
+
+export type LineType = 'metro' | 'rer' | 'tramway' | 'bus';
+export type TrafficSlug = 'normal' | 'normal_trav' | 'critical';

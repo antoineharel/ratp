@@ -1,4 +1,5 @@
 import { useLoaderData } from "remix";
+import TrafficCard from "~/components/TrafficCard";
 import { ratp } from "~/lib/ratp";
 
 export const loader = async () => {
@@ -10,29 +11,30 @@ type Data = Awaited<ReturnType<typeof loader>>;
 
 export default function Index() {
   const {metros, rers, tramways} = useLoaderData<Data>();
-
+  console.log(metros)
   return (
     <>
-      <div className="space-y-6">
+      <div className="grid gap-4 p-10 bg-gray-100 sm:grid-cols-2 lg:grid-cols-3">
         {metros.map(traffic => (
-          <div className="p-6 bg-gray-100">
-            <div>
-              <img
-                className="w-10"
-                src={`/img/lines/metro/${traffic.line}.svg`}
-                alt={`Ligne ${traffic.line}`}
-              />
-            </div>
-            <div>
-              {traffic.title}
-            </div>
-            {/* <div>
-              {traffic.slug}
-            </div> */}
-            <div>
-              {traffic.message}
-            </div>
-          </div>
+          <TrafficCard
+            key={`metro-${traffic.line}`}
+            type="metro"
+            traffic={traffic}
+          />
+        ))}
+        {rers.map(traffic => (
+          <TrafficCard
+            key={`rer-${traffic.line}`}
+            type="rer"
+            traffic={traffic}
+          />
+        ))}
+        {tramways.map(traffic => (
+          <TrafficCard
+            key={`tramways-${traffic.line}`}
+            type="tramway"
+            traffic={traffic}
+          />
         ))}
       </div>
     </>
